@@ -182,6 +182,7 @@ int main()
             print_sensor(1,1,3);    // Prints value of White Line Sensor1
             print_sensor(1,5,2);    // Prints Value of White Line Sensor2
             print_sensor(1,9,1);    // Prints Value of White Line Sensor3
+            
             lcd_cursor(2,3);
             lcd_string("Moving Left");
         }
@@ -190,6 +191,8 @@ int main()
         {
             forward();
             velocity(200,200);
+            
+            lcd_clear();
             print_sensor(1,1,3);    // Prints value of White Line Sensor1
             print_sensor(1,5,2);    // Prints Value of White Line Sensor2
             print_sensor(1,9,1);    // Prints Value of White Line Sensor3
@@ -205,11 +208,13 @@ int main()
         if(Front_IR_Sensor < 70)
         {
             stop();
+            
+            lcd_clear();
 			lcd_cursor(2,2);
 			lcd_string("Obstacle Ahead");
 
-            // print_sensor(1, 3, 6);   // Front IR Sensor
-            // print_sensor(1, 10, 11); // Front Sharp Sensor
+            print_sensor(1, 3, 6);   // Front IR Sensor
+            print_sensor(1, 10, 11); // Front Sharp Sensor
 			
             buzzer_on();
             _delay_ms(500);
