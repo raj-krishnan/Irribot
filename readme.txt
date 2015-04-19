@@ -1,5 +1,3 @@
-Pending: YouTube link to the ScreenCast and/or project video. 
-
 2014-CS101
 
 Group Number:331
